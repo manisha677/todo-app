@@ -10,7 +10,7 @@ The app provides basic **CRUD operations** for managing todos, making it a pract
 Ideal for learning **Docker, AWS ECS, and container orchestration** basics in a hands-on project.
 
 
-This project demonstrates how to:  
+**This project demonstrates how to:**
 
 - Containerize a Node.js application using **Docker**
   
