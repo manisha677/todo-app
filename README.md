@@ -65,17 +65,18 @@ The app itself is simple, featuring basic **CRUD (Create, Read, Update, Delete)*
 ### 3. Push Docker Image to AWS ECR
 
 
-1. Create a repository in AWS ECR.
+•  Create a repository in AWS ECR.
 
 
-2. Authenticate Docker with ECR:
+• Authenticate Docker with ECR:
    
 ****
     aws ecr get-login-password --region <your-region> | docker login --username AWS --password-stdin <your-account-id>.dkr.ecr.<region>.amazonaws.com
 ****
 
 
-3. Tag and push image:
+
+• Tag and push image:
    
 ****
     docker tag todo-app:latest <your-ecr-repo-uri>:latest
@@ -86,4 +87,73 @@ The app itself is simple, featuring basic **CRUD (Create, Read, Update, Delete)*
 | Caption| Screenshot|
 |------------|---------|
 | Successfully pushed Docker image to AWS ECR.| ![Successfully pushed Docker image to AWS ECR.](Screenshots/imagepushed.png) |
+
+
+### 4. Create ECS Cluster
+
+
+• Go to AWS ECS → Clusters → Create Cluster.
+
+• Choose EC2 Linux + Networking or Fargate.
+
+• Configure cluster name and networking.
+
+
+| Caption| Screenshot|
+|------------|---------|
+| ECS cluster creation screen | ![ECS cluster creation screen](Screenshots/creatingcluster.png) |
+
+
+### 5. Create Task Definition
+
+• Go to Task Definitions → Create Task Definition.
+
+• Choose Fargate.
+
+• Configure task name, container name, and container image (from ECR).
+
+• Allocate memory and CPU.
+
+
+| Caption| Screenshot|
+|------------|---------|
+| ECS Task Definition configuration | ![ECS Task Definition configuration](Screenshots/creatingtaskdefinition.png) |
+
+
+### 6. Set Container Settings
+
+• Add port mappings (e.g., 8000).
+
+• Set environment variables if required.
+
+
+| Caption| Screenshot|
+|------------|---------|
+| Configuring container port mappings and environment variables | ![Configuring container port mappings and environment variables](Screenshots/settintaskdefinition.png) |
+
+
+
+### 7. Run Task in Cluster
+
+• Go to Clusters → Your Cluster → Tasks → Run Task.
+
+• Select the task definition and launch type.
+
+• Monitor the running task.
+
+| Caption| Screenshot|
+|------------|---------|
+| ECS task running successfully | ![ ECS task running successfully](Screenshots/successfulycontainerbuild.png) |
+
+
+
+### 8. Access Application
+
+• Copy the public IP of the ECS task.
+
+• Open in browser:  **** http://<public-ip>:8000 ****
+
+| Caption| Screenshot|
+|------------|---------|
+| Todo app running successfully on ECS | ![ Todo app running successfully on ECS](Screenshots/workingnode.jsapp.png) |
 
