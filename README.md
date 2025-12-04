@@ -151,9 +151,23 @@ The app itself is simple, featuring basic **CRUD (Create, Read, Update, Delete)*
 
 • Copy the public IP of the ECS task.
 
-• Open in browser:  **** http://<public-ip>:8000 ****
+• Open in browser: http://<public-ip>:8000 
 
 | Caption| Screenshot|
 |------------|---------|
 | Todo app running successfully on ECS | ![ Todo app running successfully on ECS](Screenshots/workingnode.jsapp.png) |
+
+
+🎯 ## Conclusion
+
+Your Todo App is now fully containerized, deployed, and running successfully on AWS ECS using an ECR-hosted Docker image.
+This project demonstrates a complete workflow — from local development to cloud deployment — making it a great reference for DevOps and AWS learning.
+
+❤️##  Feedback & Contributions
+
+Feel free to fork the project, open issues, or submit pull requests to improve features or deployment workflows.
+
+⭐##  Show Your Support
+
+If you found this project helpful, please ⭐ the repository.
 
