@@ -1,21 +1,37 @@
-
-# node-todo-cicd
-
-Run these commands:
+# Todo‑App
 
 
-`sudo apt install nodejs`
+A simple Node.js‑based Todo application, containerized with Docker and deployed on AWS ECS / ECR.  
+Easy to setup and run — ideal as a demo of container‑oriented deployment workflow.
 
 
-`sudo apt install npm`
+## ✅ Features
+
+- Basic Todo functionalities (create/read/update/delete)
+  
+- Containerized using Docker
+  
+- Deployment setup on AWS ECS with ECR image push
+  
+- Easily configurable — quick start guide available
 
 
-`npm install`
+## 🛠 Prerequisites
 
-`node app.js`
+- Docker installed
+  
+- AWS account & AWS CLI configured (with permissions for ECR & ECS)
+   
+- (Optional) Node.js installed — only needed if you want to run without Docker
+  
 
-or Run by docker compose
-
-test
+## 🚀 Deployment / Setup Steps
 
 
+### 1. Clone the repository  
+
+
+**** 
+     git clone https://github.com/your‑username/todo-app.git
+     cd todo-app
+****
