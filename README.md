@@ -50,3 +50,6 @@ The app itself is simple, featuring basic **CRUD (Create, Read, Update, Delete)*
      git clone https://github.com/your‑username/todo-app.git
      cd todo-app
 ****
+
+https://github.com/manisha677/todo-app/blob/main/Screenshots/insidenode-todo-app.png
+
