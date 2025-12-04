@@ -51,5 +51,12 @@ The app itself is simple, featuring basic **CRUD (Create, Read, Update, Delete)*
      cd todo-app
 ****
 
-https://github.com/manisha677/todo-app/blob/main/Screenshots/insidenode-todo-app.png
 
+### 2. Build the Docker Image
+
+****
+    docker build -t todo-app .
+****
+| Caption| Screenshot|
+|------------|---------|
+| Docker image build in progress.| ![Docker image build in progress.](Screenshots/dockerbuild.png) |
