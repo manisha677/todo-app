@@ -59,4 +59,31 @@ The app itself is simple, featuring basic **CRUD (Create, Read, Update, Delete)*
 ****
 | Caption| Screenshot|
 |------------|---------|
-| Docker image build in progress.| ![Docker image build in progress.](Screenshots/dockerbuild.png) |
+| Docker image build in progress| ![Docker image build in progress](Screenshots/dockerbuild.png) |
+
+
+### 3. Push Docker Image to AWS ECR
+
+
+1. Create a repository in AWS ECR.
+
+
+2. Authenticate Docker with ECR:
+   
+****
+    aws ecr get-login-password --region <your-region> | docker login --username AWS --password-stdin <your-account-id>.dkr.ecr.<region>.amazonaws.com
+****
+
+
+3. Tag and push image:
+   
+****
+    docker tag todo-app:latest <your-ecr-repo-uri>:latest
+
+    docker push <your-ecr-repo-uri>:latest
+****
+
+| Caption| Screenshot|
+|------------|---------|
+| Successfully pushed Docker image to AWS ECR.| ![Successfully pushed Docker image to AWS ECR.](Screenshots/imagepushed.png) |
+
